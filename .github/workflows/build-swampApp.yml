@@ -39,7 +39,7 @@ jobs:
 
     - name: build webapp
       run: |
-         jf npm install
+         jf npm ci
          jf npm publish
          npm run build
 
