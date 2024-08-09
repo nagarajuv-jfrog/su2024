@@ -35,7 +35,7 @@ jobs:
       with:
         oidc-provider-name: jfrog-github-oidc
     - name: Set CLI Config
-      run: jf npm-config --global=true --repo-resolve=codeninjas-proj-nag-npm-remote --repo-deploy=codeninjas-proj-nag-npm-local
+      run: jf npm-config --global=true --repo-resolve=codeninjas-proj-nag-npm-virtual --repo-deploy=codeninjas-proj-nag-npm-virtual
 
     - name: build webapp
       run: |
