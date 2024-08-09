@@ -14,7 +14,7 @@ jobs:
   build-publish-docker:
     runs-on: ubuntu-latest
     env:
-      DOCKER_REPO: codeninjas-proj-docker-virtual
+      DOCKER_REPO: codeninjas-proj-nag-docker-virtual
       IMAGE_NAME: swampapp
       JF_URL: https://${{ vars.JF_URL }}/
       DOCKER_BUILD_SUMMARY: false
@@ -35,7 +35,7 @@ jobs:
       with:
         oidc-provider-name: jfrog-github-oidc
     - name: Set CLI Config
-      run: jf npm-config --global=true --repo-resolve=devrel-npm --repo-deploy=devrel-npm
+      run: jf npm-config --global=true --repo-resolve=codeninjas-proj-nag-npm-virtual --repo-deploy=codeninjas-proj-nag-npm-virtual
 
     - name: build webapp
       run: |
